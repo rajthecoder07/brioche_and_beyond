@@ -15,7 +15,7 @@ export default function Story() {
         <span className="absolute bottom-20 right-[8%] text-2xl animate-float opacity-15 hidden sm:block">🥐</span>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Image Side */}
           <FadeIn>

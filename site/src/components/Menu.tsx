@@ -16,7 +16,7 @@ export default function Menu() {
         <span className="absolute bottom-16 left-[6%] text-2xl animate-float opacity-15 hidden sm:block">🧁</span>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
         <FadeIn className="w-full flex flex-col items-center justify-center text-center pb-8">
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", width: "100%" }}>
             <div className="section-badge section-badge-pink">

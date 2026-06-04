@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Top CTA band */}
       <div 
         className="bg-[#F2D2A9] py-10 sm:py-12 px-4 sm:px-6 relative overflow-hidden"
-        style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", width: "100%" }}
+        style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", width: "100%", paddingLeft: "24px", paddingRight: "24px" }}
       >
         {/* Decorative elements in CTA band */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
@@ -101,7 +101,7 @@ export default function Footer() {
       </div>
 
       {/* Footer content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 relative" style={{ paddingLeft: "24px", paddingRight: "24px" }}>
         {/* Background decoration */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-0 right-[5%] w-40 h-40 rounded-full bg-[#F9D7E3]/5 blur-3xl" />

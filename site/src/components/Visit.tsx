@@ -14,7 +14,7 @@ export default function Visit() {
         <span className="absolute bottom-16 right-[10%] text-2xl animate-float opacity-15 hidden sm:block">☕</span>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
         <FadeIn className="text-center mb-10 sm:mb-14">
           <div className="section-badge section-badge-pink">
             <span className="text-base leading-none">📍</span>

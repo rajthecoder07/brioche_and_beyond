@@ -17,7 +17,7 @@ export default function FAQ() {
         <span className="absolute bottom-12 right-[8%] text-2xl animate-float-slow opacity-15 hidden sm:block">💡</span>
       </div>
 
-      <div className="max-w-3xl mx-auto relative z-10">
+      <div className="max-w-3xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
         <FadeIn className="text-center mb-10 sm:mb-14">
           <div className="section-badge">
             <span className="text-base leading-none">🤔</span>

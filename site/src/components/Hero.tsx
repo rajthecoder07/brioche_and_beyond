@@ -74,7 +74,7 @@ export default function Hero() {
           {siteConfig.city}
         </p>
 
-        <div className="animate-fade-in-up animate-delay-300 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
+        <div className="animate-fade-in-up animate-delay-300 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-[90%] sm:w-auto max-w-[320px] sm:max-w-none mx-auto">
           <a
             href={siteConfig.ctaLink}
             target="_blank"
