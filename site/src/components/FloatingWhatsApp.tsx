@@ -5,10 +5,13 @@ import { useState, useEffect } from "react";
 
 export default function FloatingWhatsApp() {
   const [visible, setVisible] = useState(false);
-  const [pulse, setPulse] = useState(true);
+  const [pulse, setPulse] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 2000);
+    const timer = setTimeout(() => {
+      setVisible(true);
+      setPulse(true);
+    }, 2000);
     const pulseTimer = setTimeout(() => setPulse(false), 8000);
     return () => {
       clearTimeout(timer);
@@ -23,18 +26,13 @@ export default function FloatingWhatsApp() {
       href={siteConfig.ctaLink}
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 transition-all duration-300 ${
+      className={`fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] rounded-[16px] sm:rounded-[20px] flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 hover:rounded-full transition-all duration-300 animate-fade-in-up ${
         pulse ? "animate-bounce" : ""
       }`}
       aria-label="Chat on WhatsApp"
-      style={{
-        animation: visible
-          ? "fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both"
-          : "none",
-      }}
     >
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 sm:w-8 sm:h-8 text-white"
         fill="currentColor"
         viewBox="0 0 24 24"
       >

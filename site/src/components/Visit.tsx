@@ -5,14 +5,25 @@ import FadeIn from "./FadeIn";
 
 export default function Visit() {
   return (
-    <section id="visit" className="section-padding bg-[#fef9f3]">
-      <div className="max-w-6xl mx-auto">
-        <FadeIn className="text-center mb-14">
-          <p className="text-[#c69c6d] text-sm font-medium tracking-[0.25em] uppercase mb-3">
-            Come Say Hello
-          </p>
+    <section id="visit" className="section-padding bg-[#FFF5E8] relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
+        <div className="absolute top-16 right-[5%] w-48 h-48 rounded-full bg-[#F9D7E3]/15 blur-3xl" />
+        <div className="absolute bottom-20 left-[8%] w-40 h-40 rounded-full bg-[#F2D2A9]/15 blur-2xl" />
+        <span className="absolute top-12 left-[6%] text-3xl animate-float-slow opacity-15 hidden sm:block">📍</span>
+        <span className="absolute bottom-16 right-[10%] text-2xl animate-float opacity-15 hidden sm:block">☕</span>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        <FadeIn className="text-center mb-10 sm:mb-14">
+          <div className="section-badge section-badge-pink">
+            <span className="text-base leading-none">📍</span>
+            <p className="text-[#6B4A3A] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">
+              Come Say Hello
+            </p>
+          </div>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl text-[#2c1810] mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl text-[#6B4A3A] mb-3 sm:mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Find Us
@@ -20,16 +31,19 @@ export default function Visit() {
           <hr className="gold-line mx-auto" />
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           {/* Info */}
           <FadeIn>
-            <div className="bg-[#2c1810] rounded-2xl p-8 md:p-10 text-white h-full flex flex-col justify-between">
+            <div 
+              className="bg-[#6B4A3A] text-white h-full flex flex-col justify-between shadow-[0_12px_50px_rgba(107,74,58,0.35)]"
+              style={{ padding: "36px", borderRadius: "24px" }}
+            >
               {/* Address */}
-              <div className="mb-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-[#c69c6d]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="mb-6 sm:mb-8 space-y-5 sm:space-y-6">
+                <div className="flex items-start gap-5 sm:gap-6">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] sm:rounded-[16px] bg-[#F9D7E3]/20 flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-[#c69c6d]"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-[#F9D7E3]"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -40,18 +54,18 @@ export default function Visit() {
                       />
                     </svg>
                   </div>
-                  <div>
-                    <p className="font-semibold text-[#c69c6d] text-sm uppercase tracking-wide mb-1">
+                  <div className="pt-0.5">
+                    <p className="font-bold text-[#F9D7E3] text-xs sm:text-sm uppercase tracking-wide mb-1" style={{ fontFamily: "var(--font-display)" }}>
                       Address
                     </p>
-                    <p className="text-white/80 leading-relaxed">
+                    <p className="text-white/80 leading-relaxed font-medium text-sm sm:text-base">
                       {siteConfig.address}
                     </p>
                     <a
                       href={siteConfig.googleMapsLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#ddb88c] text-sm mt-2 inline-block hover:underline"
+                      className="text-[#F2D2A9] text-sm mt-1.5 inline-block hover:underline font-semibold"
                     >
                       Get directions →
                     </a>
@@ -59,23 +73,23 @@ export default function Visit() {
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-[#c69c6d]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="flex items-start gap-5 sm:gap-6">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] sm:rounded-[16px] bg-[#F9D7E3]/20 flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-[#c69c6d]"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-[#F9D7E3]"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
                   </div>
-                  <div>
-                    <p className="font-semibold text-[#c69c6d] text-sm uppercase tracking-wide mb-1">
+                  <div className="pt-0.5">
+                    <p className="font-bold text-[#F9D7E3] text-xs sm:text-sm uppercase tracking-wide mb-1" style={{ fontFamily: "var(--font-display)" }}>
                       Call or WhatsApp
                     </p>
                     <a
                       href={`tel:+${siteConfig.whatsappNumber}`}
-                      className="text-white/80 hover:text-white transition-colors"
+                      className="text-white/80 hover:text-white transition-colors font-medium text-sm sm:text-base"
                     >
                       {siteConfig.phone}
                     </a>
@@ -83,10 +97,10 @@ export default function Visit() {
                 </div>
 
                 {/* Hours */}
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#c69c6d]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="flex items-start gap-5 sm:gap-6">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] sm:rounded-[16px] bg-[#F9D7E3]/20 flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-[#c69c6d]"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-[#F9D7E3]"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -97,16 +111,16 @@ export default function Visit() {
                       />
                     </svg>
                   </div>
-                  <div>
-                    <p className="font-semibold text-[#c69c6d] text-sm uppercase tracking-wide mb-1">
+                  <div className="pt-0.5">
+                    <p className="font-bold text-[#F9D7E3] text-xs sm:text-sm uppercase tracking-wide mb-1" style={{ fontFamily: "var(--font-display)" }}>
                       Hours
                     </p>
                     {siteConfig.hours.map((h) => (
                       <p
                         key={h.day}
-                        className="text-white/80 text-sm leading-loose"
+                        className="text-white/80 text-sm leading-relaxed font-medium"
                       >
-                        <span className="font-medium text-white/90">
+                        <span className="font-semibold text-white/90">
                           {h.day}:
                         </span>{" "}
                         {h.time}
@@ -121,32 +135,33 @@ export default function Visit() {
                 href={siteConfig.ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center py-4 bg-[#c69c6d] text-white font-semibold rounded-full hover:bg-[#ddb88c] hover:text-[#2c1810] transition-all duration-300 text-base"
+                className="block w-full text-center py-3.5 sm:py-4 bg-[#F9D7E3] text-[#6B4A3A] font-bold rounded-full hover:bg-[#FDE8F0] hover:scale-[1.02] transition-all duration-300 text-sm sm:text-base shadow-md"
+                style={{ fontFamily: "var(--font-body)" }}
               >
-                Message Us on WhatsApp
+                Message Us on WhatsApp 💌
               </a>
             </div>
           </FadeIn>
 
           {/* Map or Image */}
           <FadeIn delay={150}>
-            <div className="rounded-2xl overflow-hidden shadow-lg h-full min-h-[400px] relative bg-[#e8d4b8]">
+            <div className="rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_12px_50px_rgba(249,215,227,0.4)] min-h-[350px] sm:min-h-[400px] lg:min-h-0 lg:h-full relative bg-[#F9D7E3]">
               <iframe
                 src={siteConfig.mapEmbedUrl}
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: 400 }}
+                style={{ border: 0, minHeight: 350 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Brioche and Beyond location"
-                className="absolute inset-0"
+                className="absolute inset-0 w-full h-full"
               />
               {/* Fallback if map does not load */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="text-center">
                   <p
-                    className="text-2xl text-[#2c1810]/30"
+                    className="text-xl sm:text-2xl text-[#6B4A3A]/20"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     Flavors Lane, Dehradun
@@ -156,6 +171,16 @@ export default function Visit() {
             </div>
           </FadeIn>
         </div>
+      </div>
+
+      {/* Wavy bottom divider */}
+      <div className="absolute bottom-0 left-0 right-0 leading-[0]">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-[30px] sm:h-[45px]">
+          <path
+            d="M0,20 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z"
+            fill="#F9D7E3"
+          />
+        </svg>
       </div>
     </section>
   );
